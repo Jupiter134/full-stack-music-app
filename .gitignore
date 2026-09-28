@@ -1,3 +1,4 @@
+# *(Note: The live link hosts the frontend interface via GitHub Pages. The Node.js backend and SQLite database logic can be reviewed directly in the source code repositories).*
 node_modules/
 data/app.db
 *.db

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav>
+    <a class="navbox" href="index.html">Home</a>
+    <a class="navbox" href="artists.html">Artists</a>
+    <a class="navbox" href="albums.html">Albums</a>
+    <a class="navbox" href="songs.html">Songs</a>
+    </nav>
+</header>
+<body>
+    <h1>Artists</h1>
+
+    <!-- CREATE ARTIST -->
+    <section class="card">
+        <h3>Create Artist</h3>
+        <form onsubmit="event.preventDefault(); createArtist();">
+            <input id="createName" placeholder="Name">
+            <input id="createGenre" placeholder="Genre">
+            <input id="createListeners" placeholder="Monthly listeners">
+            <button type="submit">Create</button>
+        </form>
+    </section>
+
+    <!-- UPDATE ARTIST -->
+    <section class="card">
+        <h3>Update Artist</h3>
+        <form onsubmit="event.preventDefault(); updateArtist();">
+            <input id="updateId" placeholder="Artist ID">
+            <input id="updateName" placeholder="New Name">
+            <input id="updateGenre" placeholder="New Genre">
+            <input id="updateListeners" placeholder="New Monthly Listeners">
+            <button type="submit">Update</button>
+        </form>
+    </section>
+
+    <!-- DELETE ARTIST -->
+    <section class="card">
+        <h3>Delete Artist</h3>
+        <form onsubmit="event.preventDefault(); deleteArtist();">
+            <input id="deleteId" placeholder="ID">
+            <button onclick="deleteArtist()">Delete</button>
+        </form>
+    </section>
+
+    <!--GET ARTIST BY ID-->
+    <section class="card">
+        <h2>Find Artist by ID</h2>
+        <form onsubmit="event.preventDefault(); getArtistById();">
+            <input id="searchId" placeholder="Artist ID">
+            <button type="submit">Search</button>
+        </form>
+        <div id="singleArtistResult"></div>
+    </section>
+
+    <!-- GET ALL ARTISTS -->
+    <section class="card">
+        <h3>All Artists</h3>
+        <button onclick="loadArtists()">Show All Artists</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th>
+                    <th>Genre</th>
+                    <th>Listeners</th>
+                </tr>
+            </thead>
+            <tbody id="artistsTable"></tbody>
+        </table>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
